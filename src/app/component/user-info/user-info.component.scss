@@ -1,0 +1,17 @@
+.user-info-button {
+  position: relative;
+}
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(48px);
+  border-radius: 2px;
+  box-shadow: 0 0px 0px 2px #fff;
+}
+
+
+
+.menu *[mat-button]:hover {
+  background-color: var(--color-deep-purple2 !important);
+}

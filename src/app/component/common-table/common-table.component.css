@@ -1,0 +1,30 @@
+.common-table {
+  position: relative;
+  width:100%;
+}
+
+.common-table-button-set {
+  color: white;
+}
+.table {
+  width: 100%;
+}
+
+td,th {
+  vertical-align: middle;
+  color: #ffffff !important;
+  text-align: left;
+  border: 2px solid rosybrown;
+  padding: 8px 6px;
+}
+.operate-button {
+  min-height: 32px !important;
+}
+.align-items-center {
+  align-items: center;
+  -webkit-align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}

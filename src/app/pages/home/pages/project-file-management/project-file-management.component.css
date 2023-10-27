@@ -1,0 +1,19 @@
+mat-card {
+  margin: 0 16px 4px 0;
+  width: 120px;
+  height: 92px;
+  cursor: pointer
+}
+
+mat-icon {
+  width: 36px;
+  height:36px;
+  font-size: 36px;
+}
+
+.file-card-name {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}

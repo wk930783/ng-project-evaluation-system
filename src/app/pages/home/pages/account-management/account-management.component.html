@@ -1,0 +1,24 @@
+<div class="flex flex-col">
+  <div class="flex flex-row items-center" style="height: 48px;">
+    <form class="flex flex-row" (ngSubmit)="submitFromForm()" action="update-team">
+      <div class="flex flex-row" style="margin-bottom: 8px">
+        <label class="text-white" for="account">組別名稱 : </label>
+        <div id="account" class="flex flex-col">
+          <input type="text" placeholder="查詢姓名或帳號" [(ngModel)]="queryParams.user">
+        </div>
+      </div>
+    </form>
+    <button class="flex flex-row bg-purple text-white ml-4" mat-flat-button color="primary" (click)="advancedSearch()">查詢</button>
+    <button class="flex flex-row bg-purple text-white ml-auto" mat-flat-button color="primary" (click)="createMemberDlg()">新增</button>
+  </div>
+  <app-common-table
+  [tableData]="accountList"
+  [tableColumnDefs]="tableColumnDefs"
+  [operateItems]="operateItems"
+  >
+  <!-- 檔案 -->
+  <ng-template appCommonTableFieldTemplate dataKey="file" let-data>
+    <span>{{data.data.name + '.' + data.data.type}}</span>
+  </ng-template>
+  </app-common-table>
+</div>

@@ -1,0 +1,14 @@
+<div class="flex flex-col">
+  <app-common-table
+  [tableData]="teamList"
+  (tableDataChange)="saveTeamEvaluation()"
+  [tableColumnDefs]="tableColumnDefs"
+  [tableType]="'edit'"
+  [isEdit]="true"
+  >
+  <!-- 檔案 -->
+  <ng-template appCommonTableFieldTemplate dataKey="file" let-data>
+    <span>{{data.data.name + '.' + data.data.type}}</span>
+  </ng-template>
+  </app-common-table>
+</div>

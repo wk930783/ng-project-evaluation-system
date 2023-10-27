@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>組員資料</h1>
+<div mat-dialog-content class="dlg-content">
+  <mat-form-field>
+    <mat-label>姓名</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>帳號</mat-label>
+    <input matInput [(ngModel)]="data.account">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">取消</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>確定</button>
+</div>

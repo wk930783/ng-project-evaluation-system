@@ -1,0 +1,22 @@
+<div>
+  <h2 class="text-white">上傳文件（限PDF檔）</h2>
+  <section class="flex flex-row flex-wrap mt-4">
+    <ng-container *ngFor="let file of fileList;let i = index ;trackBy: trackByFn">
+      <mat-card (click)="downloadFile(file)">
+        <mat-card-content class=" flex-col items-center" style="display: flex">
+          <mat-icon style="hfont-size:36px">picture_as_pdf</mat-icon>
+          <span class="file-card-name" [matTooltip]="file.name + '.' + file.type">{{file.name + '.' + file.type}}</span>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+    <label for="upload-file">
+      <mat-card>
+        <mat-card-content class="flex-col items-center" style="display: flex">
+          <mat-icon style="hfont-size:36px">add_circle_outline</mat-icon>
+          <span>新增</span>
+        </mat-card-content>
+      </mat-card>
+    </label>
+    <input type="file" name="upload-file" id="upload-file" [(ngModel)]="uploadFile" hidden>
+  </section>
+</div>

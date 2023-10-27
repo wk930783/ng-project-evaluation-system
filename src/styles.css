@@ -1,1 +1,36 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+@font-face {
+  font-family: 'zpix';
+  src: url('./assets/font-family/zpix.ttf');
+}
+
+:root{
+  font-size: 16px;
+  --color-deep-purple: #231f2b;
+  --color-deep-purple2: #383245;
+  --color-deep-purple3: #413d5f;
+  --color-purple: #673ab7;
+}
+
+.bg-purple {
+  background-color: var(--color-purple) !important;
+}
+.bg-deep-purple {
+  background-color: var(--color-deep-purple) !important;
+}
+
+.bg-deep-purple3 {
+  background-color: var(--color-deep-purple3);
+}
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'zpix', Roboto, "Helvetica Neue", sans-serif; }
+
+input {
+  padding: 0 4px;
+}

@@ -1,0 +1,38 @@
+<div class="login-page h-full flex flex-col bg-deep-purple" [ngClass]="{bgColorClassForWrap: true}" >
+  <app-top-bar [title]="titleForBar"></app-top-bar>
+  <!-- 登入區塊 -->
+  <section class="flex flex-col items-center" style="width: 50%; margin:auto;">
+        <p class="text-white" style="margin: 24px 0;font-size: 1.5rem;text-wrap: nowrap;">歡迎使用專題管理系統<br>請輸入您的帳號/密碼登入</p>
+        <mat-card style="box-shadow: 0px 0px 0px 2px white; border-radius: 4px">
+          <mat-card-content>
+            <form action="login" class="flex flex-col" [formGroup]="formGroupForLogin" (ngSubmit)="login()">
+              <div style="height: 72px; margin-bottom: 8px">
+                <label class="text-white" for="account">帳號</label>
+                <div id="account" class="flex flex-col">
+                  <input type="text" placeholder="請輸入帳號" formControlName="account">
+                  <mat-error class="text-slate-100" *ngIf="accountFormControl.hasError('required') && accountFormControl.touched">
+                    帳號為<strong>必填</strong>!
+                  </mat-error>
+                </div>
+              </div>
+
+              <div style="height: 72px">
+                <label class="text-white" for="pwd">密碼</label>
+                <div id="pwd" class="flex flex-col">
+                  <input type="password" placeholder="請輸入密碼" formControlName="pwd">
+                  <mat-error class="text-slate-100" *ngIf="pwdFormControl.hasError('required') && pwdFormControl.touched">
+                    密碼為<strong>必填</strong>!
+                  </mat-error>
+                </div>
+              </div>
+            </form>
+            <button class="flex flex-row bg-purple text-white" mat-flat-button color="primary" style="margin: 16px auto 0; width:90%" (click)="login()">登入</button>
+          </mat-card-content>
+        </mat-card>
+  </section>
+  <app-footer></app-footer>
+</div>
+
+
+
+

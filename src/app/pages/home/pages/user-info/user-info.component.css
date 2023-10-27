@@ -1,0 +1,17 @@
+.form-line {
+  width: 100%;
+}
+.form-line > div {
+  vertical-align: middle;
+  color: #ffffff !important;
+  text-align: left;
+  border: 2px solid rosybrown;
+  padding: 8px 6px;
+}
+.form-line > div:first-child {
+  width: 60px;
+}
+
+.form-line > div:last-child {
+  width: calc(100% - 60px);
+}
