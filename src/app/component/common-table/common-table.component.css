@@ -12,9 +12,9 @@
 
 td,th {
   vertical-align: middle;
-  color: #ffffff !important;
+  color: black !important;
   text-align: left;
-  border: 2px solid rosybrown;
+  border: 2px solid #009CAD;
   padding: 8px 6px;
 }
 .operate-button {
@@ -27,4 +27,11 @@ td,th {
 .justify-content-between {
   justify-content: space-between;
   -webkit-justify-content: space-between;
+}
+
+.text-white {
+  color: white !important;
+}
+button:hover {
+  opacity: .8;
 }

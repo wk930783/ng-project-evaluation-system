@@ -1,3 +1,6 @@
+.home {
+  height: calc(100% - 64px - 58px)
+}
 .page-content {
   padding: 20px 16px;
   width: 100%;

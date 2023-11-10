@@ -2,16 +2,16 @@
   <div class="flex flex-row">
     <form class="flex flex-row" (ngSubmit)="submitFromForm()" [formGroup]="formGroupForTeam" action="update-team">
       <div class="flex flex-row" style="height: 48px; margin-bottom: 8px">
-        <label class="text-white" for="account">組別名稱 : </label>
-        <div id="account" class="flex flex-col">
-          <input type="text" placeholder="請輸入帳號" formControlName="name">
+        <label for="account">組別名稱 : </label>
+        <div  class="flex flex-col">
+          <input type="text" id="name" name="name" placeholder="請輸入帳號" formControlName="name">
           <mat-error class="text-slate-100" *ngIf="nameControl.hasError('required') && nameControl.touched">
             組別名稱<strong>必填</strong>!
           </mat-error>
         </div>
       </div>
     </form>
-    <button class="flex flex-row bg-purple text-white ml-auto mb-auto" mat-flat-button color="primary" (click)="createMemberDlg()">新增</button>
+    <button class="flex flex-row bg-blue text-white ml-auto mb-auto" mat-flat-button color="primary" (click)="createMemberDlg()">新增</button>
   </div>
   <app-common-table
   *ngIf="team?.members"

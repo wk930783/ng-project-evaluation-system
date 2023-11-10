@@ -2,28 +2,28 @@
   <form class="flex flex-col" (submit)="updateUserInfo()">
     <div class="form-line flex flex-row">
       <div>姓名</div>
-      <div>
+      <div class="form-field-input">
         <input style="color:black" type="text" name="name" id="name" [(ngModel)]="userInfo.userName">
       </div>
     </div>
     <div class="form-line flex flex-row">
       <div>帳號</div>
-      <div>
+      <div class="form-field-input">
         <input style="color:black" type="text" name="account" id="account" [(ngModel)]="userInfo.account">
       </div>
     </div>
     <div class="form-line flex flex-row">
       <div>權限</div>
-      <div>
+      <div class="form-field-input">
         {{userInfo.roleName}}
       </div>
     </div>
     <div class="form-line flex flex-row">
       <div>備註</div>
-      <div>
+      <div class="form-field-input">
         <input style="color:black" type="text" name="remark" id="remark" [(ngModel)]="userInfo.remark">
       </div>
     </div>
   </form>
-  <button class="flex flex-row bg-purple text-white ml-auto mt-4" mat-flat-button color="primary" (click)="updateUserInfo()">提交</button>
+  <button class="flex flex-row bg-blue ml-auto mt-4" style="color: white" mat-flat-button (click)="updateUserInfo()">提交</button>
 </div>

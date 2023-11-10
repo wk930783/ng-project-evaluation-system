@@ -1,0 +1,7 @@
+button {
+  background-color: var(--color-blue) !important;
+  color: white !important;
+}
+button:hover {
+  opacity: .8;
+}

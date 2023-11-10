@@ -3,13 +3,18 @@
 }
 .form-line > div {
   vertical-align: middle;
-  color: #ffffff !important;
   text-align: left;
   border: 2px solid rosybrown;
   padding: 8px 6px;
 }
 .form-line > div:first-child {
   width: 60px;
+  text-align: center;
+}
+
+.form-field-input{
+  box-sizing: content-box;
+  height: 24px;
 }
 
 .form-line > div:last-child {

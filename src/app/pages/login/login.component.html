@@ -1,10 +1,10 @@
-<div class="login-page h-full flex flex-col bg-deep-purple" [ngClass]="{bgColorClassForWrap: true}" >
+<div class="login-page h-full flex flex-col" [ngClass]="{bgColorClassForWrap: true}" >
   <app-top-bar [title]="titleForBar"></app-top-bar>
   <!-- 登入區塊 -->
   <section class="flex flex-col items-center" style="width: 50%; margin:auto;">
-        <p class="text-white" style="margin: 24px 0;font-size: 1.5rem;text-wrap: nowrap;">歡迎使用專題管理系統<br>請輸入您的帳號/密碼登入</p>
+        <p class="text-black" style="margin: 24px 0;font-size: 1.5rem;text-wrap: nowrap;">歡迎使用專題管理系統<br>請輸入您的帳號/密碼登入</p>
         <mat-card style="box-shadow: 0px 0px 0px 2px white; border-radius: 4px">
-          <mat-card-content>
+          <mat-card-content class="flex flex-col items-center" style="display: flex">
             <form action="login" class="flex flex-col" [formGroup]="formGroupForLogin" (ngSubmit)="login()">
               <div style="height: 72px; margin-bottom: 8px">
                 <label class="text-white" for="account">帳號</label>
@@ -26,7 +26,7 @@
                 </div>
               </div>
             </form>
-            <button class="flex flex-row bg-purple text-white" mat-flat-button color="primary" style="margin: 16px auto 0; width:90%" (click)="login()">登入</button>
+            <button class="login-btn flex flex-row text-white" mat-flat-button color="accent" style="margin: 16px auto 0; width:90%" (click)="login()">登入</button>
           </mat-card-content>
         </mat-card>
   </section>

@@ -13,5 +13,10 @@
 }
 
 mat-card {
-  background-color: var(--color-deep-purple);
+  background-color: var(--color-pink);
+}
+
+.login-btn {
+  color: white !important;
+  background: #ffc87b !important;
 }

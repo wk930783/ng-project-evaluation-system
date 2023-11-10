@@ -7,11 +7,23 @@
   right: 0;
   transform: translateY(48px);
   border-radius: 2px;
-  box-shadow: 0 0px 0px 2px #fff;
+  background-color: #ec7bb4;
+  box-shadow: 0 0px 0px 2px #ec7bb4;
+  z-index: 2;
 }
-
-
-
+.hint {
+  color: #e3e3e3;
+  cursor: pointer;
+  font-size: 16px;
+}
 .menu *[mat-button]:hover {
   background-color: var(--color-deep-purple2 !important);
+}
+
+.btn-bg-pink {
+  background-color: #ec7bb4 !important;
+  color: white !important;
+}
+.btn-bg-pink:hover {
+  background-color: #ef69ac !important;
 }

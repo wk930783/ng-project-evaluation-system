@@ -2,14 +2,14 @@
   <div class="flex flex-row items-center" style="height: 48px;">
     <form class="flex flex-row" (ngSubmit)="submitFromForm()" action="update-team">
       <div class="flex flex-row" style="margin-bottom: 8px">
-        <label class="text-white" for="account">組別名稱 : </label>
+        <label for="account">組別名稱 : </label>
         <div id="account" class="flex flex-col">
           <input type="text" placeholder="查詢姓名或帳號" [(ngModel)]="queryParams.user">
         </div>
       </div>
     </form>
-    <button class="flex flex-row bg-purple text-white ml-4" mat-flat-button color="primary" (click)="advancedSearch()">查詢</button>
-    <button class="flex flex-row bg-purple text-white ml-auto" mat-flat-button color="primary" (click)="createMemberDlg()">新增</button>
+    <button class="flex flex-row bg-purple text-white ml-4" mat-flat-button (click)="advancedSearch()">查詢</button>
+    <button class="flex flex-row bg-purple text-white ml-auto" mat-flat-button (click)="createMemberDlg()">新增</button>
   </div>
   <app-common-table
   [tableData]="accountList"

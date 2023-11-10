@@ -13,6 +13,8 @@
   --color-deep-purple2: #383245;
   --color-deep-purple3: #413d5f;
   --color-purple: #673ab7;
+  --color-blue: #3db9a4;
+  --color-pink: #ec7bb4;
 }
 
 .bg-purple {
@@ -25,12 +27,23 @@
 .bg-deep-purple3 {
   background-color: var(--color-deep-purple3);
 }
+.bg-blue {
+  background-color: var(--color-blue) !important;
+}
+.bg-pink {
+  background-color: var(--color-pink) !important;
+}
 
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'zpix', Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 input {
   padding: 0 4px;
+  box-shadow: 0 4px 0px -1px #3a3a3a;
+}
+
+input:focus-visible {
+  box-shadow: unset;
 }

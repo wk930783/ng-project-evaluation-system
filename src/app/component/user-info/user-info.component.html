@@ -2,9 +2,9 @@
   <button *ngIf="isLogin" class="text-base" (click)="changeMenuVisible()" mat-icon-button>
     <mat-icon class="text-white" matBadgeColor="warn">account_circle</mat-icon>
   </button>
-  <a *ngIf="!isLogin" style="color: grey; cursor: pointer" [routerLink]="['/']">聯絡我們</a>
+  <a *ngIf="!isLogin" class="hint" [routerLink]="['/']">聯絡我們</a>
   <div [hidden]="!menuVisible" class="menu flex flex-col" style="color: white">
-    <a class="text-sm bg-deep-purple" mat-button [routerLink]="['/user-info']">帳號設定</a>
-    <button class="text-sm bg-deep-purple" mat-button (click)="logout()">登出</button>
+    <a class="text-sm btn-bg-pink" mat-button [routerLink]="['/user-info']">帳號設定</a>
+    <button class="text-sm btn-bg-grey" mat-button (click)="logout()">登出</button>
   </div>
 </div>
