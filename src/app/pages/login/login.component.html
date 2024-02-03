@@ -9,7 +9,7 @@
               <div style="height: 72px; margin-bottom: 8px">
                 <label class="text-white" for="account">帳號</label>
                 <div id="account" class="flex flex-col">
-                  <input type="text" placeholder="請輸入帳號" formControlName="account">
+                  <input type="text" placeholder="請輸入帳號" formControlName="account" autocomplete="off">
                   <mat-error class="text-slate-100" *ngIf="accountFormControl.hasError('required') && accountFormControl.touched">
                     帳號為<strong>必填</strong>!
                   </mat-error>
@@ -19,14 +19,14 @@
               <div style="height: 72px">
                 <label class="text-white" for="pwd">密碼</label>
                 <div id="pwd" class="flex flex-col">
-                  <input type="password" placeholder="請輸入密碼" formControlName="pwd">
+                  <input type="password" placeholder="請輸入密碼" formControlName="pwd" autocomplete="off">
                   <mat-error class="text-slate-100" *ngIf="pwdFormControl.hasError('required') && pwdFormControl.touched">
                     密碼為<strong>必填</strong>!
                   </mat-error>
                 </div>
               </div>
+              <button class="login-btn flex flex-row text-white" mat-flat-button color="accent" style="margin: 16px auto 0; width:90%" (click)="login()">登入</button>
             </form>
-            <button class="login-btn flex flex-row text-white" mat-flat-button color="accent" style="margin: 16px auto 0; width:90%" (click)="login()">登入</button>
           </mat-card-content>
         </mat-card>
   </section>

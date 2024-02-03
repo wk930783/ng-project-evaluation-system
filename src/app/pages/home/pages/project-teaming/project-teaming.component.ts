@@ -40,7 +40,6 @@ export class ProjectTeamingComponent implements OnInit {
   operateItems: OperateItem<TeamMember>[] = [];
   /** 組別資料 */
   team!: Team;
-  members: TeamMember[] = [];
   constructor(
     private projectService: ProjectService,
     private userService: UserService,
@@ -58,12 +57,12 @@ export class ProjectTeamingComponent implements OnInit {
   }
   /** 獲取組別資料 */
   getTeam(): void {
+    console.log('getTe');
     this.projectService
       .getTeam({ name: this.userService.userInfo.userName })
       .subscribe({
         next: (data) => {
           this.team = _.cloneDeep(data);
-          this.members = _.cloneDeep(data.members);
           this.nameControl.patchValue(this.team.name);
           this.numberControl.patchValue(this.team.number);
         },

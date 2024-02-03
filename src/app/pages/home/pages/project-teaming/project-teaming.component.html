@@ -14,10 +14,10 @@
     <button class="flex flex-row bg-blue text-white ml-auto mb-auto" mat-flat-button color="primary" (click)="createMemberDlg()">新增</button>
   </div>
   <app-common-table
-  *ngIf="team?.members"
-  [tableData]="team.members"
-  [tableColumnDefs]="tableColumnDefs"
-  [operateItems]="operateItems"
+    *ngIf="team?.members"
+    [tableData]="team.members"
+    [tableColumnDefs]="tableColumnDefs"
+    [operateItems]="operateItems"
   >
   </app-common-table>
 </div>
